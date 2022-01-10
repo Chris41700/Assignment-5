@@ -1,0 +1,24 @@
+.container {
+    padding-top: 75px;
+}
+
+.col {
+    display: grid;
+    grid-template-columns: (3, 1f);
+    grid-auto-rows: 100px;
+    outline: 1px solid;
+    text-align: center;
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+#function {
+    background-color: black;
+    color: white;
+
+}
+
+#reset {
+    background-color: orangered;
+    color: white;
+}
