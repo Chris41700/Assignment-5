@@ -84,5 +84,14 @@ function removeColumn() {
 }
 
 function clickChange() {
+    let colorSelect = document.getElementById('colorOption')[0].selectedIndex = 0;
+    let colorSelect2 = document.getElementById('colorOption')[0].selectedIndex = 1;
+    let colorSelect3 = document.getElementById('colorOption')[0].selectedIndex = 2;
+    let col = document.getElementsByClassName('col');
+    
+    console.log(colorSelect2);
+    console.log(colorSelect3);
 
+    if (colorSelect == 0)
+        col = document.body.style.backgroundColor = "red";
 }
