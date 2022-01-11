@@ -71,13 +71,10 @@ function removeColumn() {
     if (rows.length > 0) {
         for (let i = 0; i < rows.length; i++) {
             let col = rows[i].getElementsByClassName('col');
-    
             if(col.length > 0) {
                 col[col.length - 1].remove();
-            }
+            } 
         }
-    } else {
-
     }
 
     console.log(grid)
@@ -86,6 +83,7 @@ function removeColumn() {
 function clickChange() {
     let selectColor = document.getElementById('colorOption');
     let cellColor = selectColor.options[selectColor.selectedIndex].value;
+    let getCol = document.querySelector('.col');
 
     console.log(selectColor);
     console.log(cellColor);
@@ -94,5 +92,22 @@ function clickChange() {
 }
 
 function fillWhite() {
-    
+    let getCol = document.querySelectorAll('col');
+
+    for (let i = 0; i < getCol.length; i++) {
+        
+    }
+}
+
+function fillColor() {
+    let getCol = document.querySelectorAll('.col');
+    let selectColor = document.getElementById('colorOption3');
+    let cellColor = selectColor.options[selectColor.selectedIndex].value;
+
+    console.log(cellColor);
+
+    for (let i = 0; i < getCol.length; i++) {
+        getCol[i].style.backgroundColor = cellColor;
+        console.log(getCol[i]);
+    }
 }
