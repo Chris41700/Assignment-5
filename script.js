@@ -80,7 +80,7 @@ function removeColumn() {
     console.log(grid)
 }
 
-function clickChange() {
+function clickChange(clickColor) {
     let selectColor = document.getElementById('colorOption');
     let cellColor = selectColor.options[selectColor.selectedIndex].value;
     let getCol = document.querySelector('.col');
@@ -88,14 +88,20 @@ function clickChange() {
     console.log(selectColor);
     console.log(cellColor);
 
-    document.getElementsByClassName('col')[0].style.backgroundColor = cellColor;
+    clickColor.style.backgroundColor = cellColor;
 }
 
 function fillWhite() {
-    let getCol = document.querySelectorAll('col');
+    let getCol = document.querySelectorAll('.col');
+    let selectColor = document.getElementById('colorOption2');
+    let cellColor = selectColor.options[selectColor.selectedIndex].value;
 
     for (let i = 0; i < getCol.length; i++) {
-        
+        if(getCol[i].style.backgroundColor = " ") {
+            getCol[i].style.backgroundColor = cellColor;
+            console.log(getCol[i]);
+        } else
+            continue;
     }
 }
 
