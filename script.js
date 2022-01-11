@@ -84,14 +84,15 @@ function removeColumn() {
 }
 
 function clickChange() {
-    let colorSelect = document.getElementById('colorOption')[0].selectedIndex = 0;
-    let colorSelect2 = document.getElementById('colorOption')[0].selectedIndex = 1;
-    let colorSelect3 = document.getElementById('colorOption')[0].selectedIndex = 2;
-    let col = document.getElementsByClassName('col');
-    
-    console.log(colorSelect2);
-    console.log(colorSelect3);
+    let selectColor = document.getElementById('colorOption');
+    let cellColor = selectColor.options[selectColor.selectedIndex].value;
 
-    if (colorSelect == 0)
-        col = document.body.style.backgroundColor = "red";
+    console.log(selectColor);
+    console.log(cellColor);
+
+    document.getElementsByClassName('col')[0].style.backgroundColor = cellColor;
+}
+
+function fillWhite() {
+    
 }
