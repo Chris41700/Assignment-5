@@ -12,46 +12,28 @@
 <body>
     <div class="container">
         <div class="row">
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
 
         <div class="row">
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
 
         <div class="row">
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
-          <div class="col">
-            Column
-          </div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
       </div>
 
-    <button id="function">Add Row</button>
-    <button id="function">Delete Row</button>
-    <button id="function">Add Column</button>
-    <button id="function">Delete Column</button>
+    <button id="add-row" onclick="addRow()">Add Row</button>
+    <button id="delete-row" onclick="deleteRow()">Delete Row</button>
+    <button id="add-column" onclick="addColumn()">Add Column</button>
+    <button id="delete-column" onclick="removeColumn()">Delete Column</button>
 
     <div>
       <button id="reset">Reset Page</button>
@@ -61,10 +43,10 @@
         <h6>Select from the following list and click on a box to change the color!</h6>
         <label>Choose a color:</label>
 
-        <select>
-          <option>Red</option>
-          <option>Blue</option>
-          <option>Green</option>
+        <select id="colorOption">
+          <option value="0">Red</option>
+          <option value="1">Blue</option>
+          <option value="2">Green</option>
         </select>
     </div>
 
@@ -72,10 +54,10 @@
       <h6>Select a color and it will change all the <strong>white</strong> boxes to the color</h6>
       <label>Choose a color:</label>
 
-      <select>
-        <option>Red</option>
-        <option>Blue</option>
-        <option>Green</option>
+      <select id="colorOption">
+        <option value="0">Red</option>
+        <option value="1">Blue</option>
+        <option value="2">Green</option>
       </select>
 
       <button>Fill all white boxes</button>
@@ -85,10 +67,10 @@
         <h6>Select a color and it will change ALL the boxes to the color</h6>
         <label>Choose a color:</label>
 
-      <select>
-        <option>Red</option>
-        <option>Blue</option>
-        <option>Green</option>
+      <select id="colorOption">
+        <option value="0">Red</option>
+        <option value="1">Blue</option>
+        <option value="2">Green</option>
       </select>
 
       <button>Fill all boxes</button>
@@ -99,10 +81,10 @@
 
         <label>Choose a color:</label>
 
-      <select>
-        <option>Red</option>
-        <option>Blue</option>
-        <option>Green</option>
+      <select id="colorOption">
+        <option value="0">Red</option>
+        <option value="1">Blue</option>
+        <option value="2">Green</option>
       </select>
     </div>
 

@@ -4,7 +4,6 @@
 
 .col {
     display: grid;
-    grid-template-columns: (3, 1f);
     grid-auto-rows: 100px;
     outline: 1px solid;
     text-align: center;
@@ -12,13 +11,19 @@
     margin-left: -1px;
 }
 
-#function {
-    background-color: black;
-    color: white;
-
-}
-
 #reset {
     background-color: orangered;
     color: white;
+}
+
+select option[value="0"] {
+    background-color: red;
+}
+
+select option[value="1"] {
+    background-color: blue;
+}
+
+select option[value="2"] {
+    background-color: green;
 }
