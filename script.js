@@ -11,6 +11,7 @@ function addRow() {
         let newCol = document.createElement('div');
         newCol.classList.add('col');
         newCol.textContent = "Column"
+        newCol.setAttribute('onclick', 'clickChange(this)')
         newRow.appendChild(newCol);
         grid.appendChild(newCol);
     }
@@ -18,6 +19,7 @@ function addRow() {
         for (let i = 0; i < getCol.length / getRow.length; i++) {
             let newCol = document.createElement('div');
             newCol.classList.add('col');
+            newCol.setAttribute('onclick', 'clickChange(this)')
             newCol.textContent = "Column"
             newRow.appendChild(newCol);
         }
@@ -49,6 +51,7 @@ function addColumn() {
         newRow.classList.add('row');
         let newCol = document.createElement('div');
         newCol.classList.add('col');
+        newCol.setAttribute('onclick', 'clickChange(this)')
         newCol.textContent = "Column"
         newRow.appendChild(newCol);
         grid.appendChild(newRow);
@@ -56,6 +59,7 @@ function addColumn() {
         for (let i = 0; i < rows.length; i++) {
             let newCol = document.createElement('div');
             newCol.classList.add('col');
+            newCol.setAttribute('onclick', 'clickChange(this)')
             newCol.textContent = "Column";
             rows[i].appendChild(newCol);
         }
@@ -97,7 +101,7 @@ function fillWhite() {
     let cellColor = selectColor.options[selectColor.selectedIndex].value;
 
     for (let i = 0; i < getCol.length; i++) {
-        if(getCol[i].style.backgroundColor = " ") {
+        if(getCol[i].style.backgroundColor == "") {
             getCol[i].style.backgroundColor = cellColor;
             console.log(getCol[i]);
         } else
